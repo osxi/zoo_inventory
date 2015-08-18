@@ -1,4 +1,4 @@
-# ZooInventory
+# zoo_inventory [![Build Status](https://travis-ci.org/osxi/zoo_inventory.svg)](https://travis-ci.org/osxi/zoo_inventory)
 
 To start your Phoenix app:
 
