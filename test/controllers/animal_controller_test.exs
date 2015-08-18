@@ -2,7 +2,16 @@ defmodule ZooInventory.AnimalControllerTest do
   use ZooInventory.ConnCase
 
   alias ZooInventory.Animal
-  @valid_attrs %{class: "some content", family: "some content", friendly_name: "some content", genus: "some content", kingdom: "some content", order: "some content", phylum: "some content", species: "some content"}
+
+  @valid_attrs %{class: "some content",
+                 family: "some content",
+                 friendly_name: "some content",
+                 genus: "some content",
+                 kingdom: "some content",
+                 order: "some content",
+                 phylum: "some content",
+                 species: "some content"}
+
   @invalid_attrs %{}
 
   setup do
