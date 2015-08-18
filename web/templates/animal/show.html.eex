@@ -1,0 +1,49 @@
+<h2>Show animal</h2>
+
+<ul>
+
+  <li>
+    <strong>Friendly name:</strong>
+    <%= @animal.friendly_name %>
+  </li>
+
+  <li>
+    <strong>Kingdom:</strong>
+    <%= @animal.kingdom %>
+  </li>
+
+  <li>
+    <strong>Phylum:</strong>
+    <%= @animal.phylum %>
+  </li>
+
+  <li>
+    <strong>Class:</strong>
+    <%= @animal.class %>
+  </li>
+
+  <li>
+    <strong>Order:</strong>
+    <%= @animal.order %>
+  </li>
+
+  <li>
+    <strong>Family:</strong>
+    <%= @animal.family %>
+  </li>
+
+  <li>
+    <strong>Genus:</strong>
+    <%= @animal.genus %>
+  </li>
+
+  <li>
+    <strong>Species:</strong>
+    <%= @animal.species %>
+  </li>
+
+</ul>
+
+
+<%= link "Edit", to: animal_path(@conn, :edit, @animal) %>
+<%= link "Back", to: animal_path(@conn, :index) %>

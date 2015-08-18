@@ -1,0 +1,3 @@
+<div class="jumbotron">
+  <h2>Today, We Would Like to Thank <i><%= @entity %></i> for Being the World's Greatest Dad!</h2>
+</div>

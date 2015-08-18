@@ -1,0 +1,40 @@
+<h2>Listing animals</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Friendly name</th>
+      <th>Kingdom</th>
+      <th>Phylum</th>
+      <th>Class</th>
+      <th>Order</th>
+      <th>Family</th>
+      <th>Genus</th>
+      <th>Species</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for animal <- @animals do %>
+    <tr>
+      <td><%= animal.friendly_name %></td>
+      <td><%= animal.kingdom %></td>
+      <td><%= animal.phylum %></td>
+      <td><%= animal.class %></td>
+      <td><%= animal.order %></td>
+      <td><%= animal.family %></td>
+      <td><%= animal.genus %></td>
+      <td><%= animal.species %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: animal_path(@conn, :show, animal), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: animal_path(@conn, :edit, animal), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: animal_path(@conn, :delete, animal), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New animal", to: animal_path(@conn, :new) %>

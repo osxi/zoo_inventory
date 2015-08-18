@@ -1,0 +1,56 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below:</p>
+      <ul>
+        <%= for {attr, message} <- f.errors do %>
+          <li><%= humanize(attr) %> <%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :friendly_name, "Friendly name", class: "control-label" %>
+    <%= text_input f, :friendly_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :kingdom, "Kingdom", class: "control-label" %>
+    <%= text_input f, :kingdom, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :phylum, "Phylum", class: "control-label" %>
+    <%= text_input f, :phylum, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :class, "Class", class: "control-label" %>
+    <%= text_input f, :class, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :order, "Order", class: "control-label" %>
+    <%= text_input f, :order, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :family, "Family", class: "control-label" %>
+    <%= text_input f, :family, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :genus, "Genus", class: "control-label" %>
+    <%= text_input f, :genus, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :species, "Species", class: "control-label" %>
+    <%= text_input f, :species, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
