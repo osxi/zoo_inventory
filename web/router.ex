@@ -23,8 +23,11 @@ defmodule ZooInventory.Router do
     resources "/animals", AnimalController
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ZooInventory do
-  #   pipe_through :api
-  # end
+  scope "/api", ZooInventory.Api do
+    pipe_through :api
+
+    scope "/v1", V1, as: :v1 do
+      resources "/animals", AnimalController
+    end
+  end
 end
