@@ -15,4 +15,4 @@ config :zoo_inventory, ZooInventory.Repo,
   username: "postgres",
   password: "postgres",
   database: "zoo_inventory_test",
-  pool_size: Ecto.Adapters.SQL.Sandbox
+  pool: Ecto.Adapters.SQL.Sandbox

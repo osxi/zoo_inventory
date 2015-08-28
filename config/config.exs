@@ -10,7 +10,7 @@ config :zoo_inventory, ZooInventory.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "A0gSCD6J2zf9gvO1DWrx8DJlQhtR5R/tkEGPHajVbiXivpQgiwDnC106oYkq6LXs",
-  render_errors: [default_format: "html"],
+  render_errors: [accepts: ["html"]],
   pubsub: [name: ZooInventory.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
