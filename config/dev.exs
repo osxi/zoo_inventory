@@ -32,4 +32,4 @@ config :zoo_inventory, ZooInventory.Repo,
   username: "postgres",
   password: "postgres",
   database: "zoo_inventory_dev",
-  size: 10 # The amount of database connections in the pool
+  pool_size: 10 # The amount of database connections in the pool
