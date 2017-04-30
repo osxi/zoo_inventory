@@ -1,5 +1,7 @@
 # zoo_inventory [![Build Status](https://travis-ci.org/osxi/zoo_inventory.svg)](https://travis-ci.org/osxi/zoo_inventory)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/osxi/zoo_inventory.svg)](https://greenkeeper.io/)
+
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
